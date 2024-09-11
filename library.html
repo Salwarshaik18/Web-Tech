@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vignan University Library</title>
+    <link rel="stylesheet" href="library.css">
+</head>
+<body>
+    <!-- Sidebar for departments -->
+    <nav class="sidebar">
+        <ul>
+            <li onclick="showDepartment('cs')">Computer Science</li>
+            <li onclick="showDepartment('ee')">Electrical Engineering</li>
+            <li onclick="showDepartment('me')">Mechanical Engineering</li>
+            <li onclick="showDepartment('ce')">Civil Engineering</li>
+            <li onclick="showDepartment('ch')">Chemical Engineering</li>
+        </ul>   
+ </nav>
+
+<!-- Main content -->
+    <div class="main-content">
+        <!-- Home Section -->
+        <section id="home" class="section">
+            <h1>Welcome to Vignan University Library</h1>
+            <p>Our library is home to over 50,000 volumes and 5,000 issues. Established in 1995, it has become an integral part of academic life at Vignan University.</p>
+
+            <!-- Search bar for searching books -->
+            <h2>Search for Books</h2>
+            <input type="text" id="searchInput" onkeyup="searchBooks()" placeholder="Search for books...">
+
+            <table id="searchTable">
+                <thead>
+                    <tr>
+                        <th>Book Name</th>
+                        <th>Author</th>
+                        <th>Edition</th>
+                        <th>Publisher</th>
+                        <th>Department</th>
+                    </tr>
+                </thead>
+                <tbody>
+<!-- Computer Science Books -->
+                    <tr>
+                        <td><a class="link" href="https://dl.ebooksworld.ir/books/Introduction.to.Algorithms.4th.Leiserson.Stein.Rivest.Cormen.MIT.Press.9780262046305.EBooksWorld.ir.pdf">Introduction to Algorithms</a></td>
+                        <td>Thomas H. Cormen</td>
+                        <td>3rd</td>
+                        <td>MIT Press</td>
+                        <td>Computer Science</td>
+                    </tr>
+                    <tr>
+                        <td><a class="link" href="https://people.engr.tamu.edu/guni/csce421/files/AI_Russell_Norvig.pdf"> Artificial Intelligence: A Modern Approach</a></td>
+                        <td>Stuart Russell</td>
+                        <td>4th</td>
+                        <td>Pearson</td>
+                        <td>Computer Science</td>
+                    </tr>
+                    <tr>
+                        <td><a class="link" href="https://fleuret.org/public/lbdl.pdf">Deep Learning</a></td>
+                        <td>François Fleuret</td>
+                        <td>3rd</td>
+                        <td>MIT Press</td>
+                        <td>Computer Science</td>
+
+                    </tr>
+                    <tr>
+                        <td><a class="link" href="https://drive.google.com/file/d/0BwxUBHTpU9kCZ0JERnJaWDBDN2c/view?resourcekey=0-71i7Q8dA8qYekqpeefoASQ">Data Mining</a></td>
+                        <td>Charu Agarwal</td>
+                        <td>3rd</td>
+                        <td>MIT Press</td>
+                        <td>Computer Science</td>
+
+                    </tr>
+                    <tr>
+                        <td><a class="link" href="https://mrcet.com/downloads/digital_notes/IT/(R18A0517)%20Web%20Technologies.pdf">Web Technologies</a></td>
+                        <td>Jarkata sartus</td>
+                        <td>3rd</td>
+                        <td>pearson</td>
+                        <td>Computer Science</td>
+</tr>
+                    <tr>
+                        <td><a class="link" href="https://kanchiuniv.ac.in/coursematerials/Digital%20image%20processing%20-Vijaya%20Raghavan.pdf"> Digital Image Processing</a></td>
+                        <td>Rafael C. Gonzalez</td>
+                        <td>3rd</td>
+                        <td>Pearson Education</td>
+                        <td>Computer Science</td>
+
+                    </tr>
+                        </tr>
+                    <!-- Civil Engineering Books -->
+                    <tr>
+                        <td<!-- Electrical Engineering Books -->
+                    <tr>
+                        <td><a class="link" href="https://r.search.yahoo.com/_ylt=AwrKF1PCedlmWQQAi.a7HAx.;_ylu=Y29sbwNzZzMEcG9zAzMEdnRpZAMEc2VjA3Ny/RV=2/RE=1726738114/RO=10/RU=https%3a%2f%2fdrive.google.com%2ffile%2fd%2f1UTnj6Nj6SuC0drzXpURcHi3jdcsk6E4s%2fview%3fusp%3dsharing/RK=2/RS=VEmu9Mq1kI.1nrWSjvQKJFsUnVM-  ">Micro electronic Circuits</a></td>
+                        <td>Adel S. Sedra</td>
+                        <td>7th</td>
+                        <td>Oxford</td>
+                        <td>Electrical Engineering</td>
+                    </tr>
+                    <tr>
+                        <td><a class="link" href="https://r.search.yahoo.com/_ylt=AwrPqFSHd9lmdAQAF8.7HAx.;_ylu=Y29sbwNzZzMEcG9zAzEEdnRpZAMEc2VjA3Ny/RV=2/RE=1726737544/RO=10/RU=https%3a%2f%2farchive.org%2fdetails%2fDigitalCommunicationsByJohnProakis4thEdition/RK=2/RS=aw43gz7.4zZiI94cAAuRrinMyRA-">Digital Communication</a></td>
+                        <td>John G. Proakis</td>
+                        <td>5th</td>
+                        <td>McGraw-Hill</td>
+                        <td>Electrical Engineering</td>
+                    </tr>
+                    <!-- Mechanical Engineering Books -->
+                    <tr>
+                        <td> <a class="link" href="https://r.search.yahoo.com/_ylt=AwrKBUb1d9lmPQQAF1K7HAx.;_ylu=Y29sbwNzZzMEcG9zAzEEdnRpZAMEc2VjA3Ny/RV=2/RE=1726737654/RO=10/RU=https%3a%2f%2fdocs.google.com%2ffile%2fd%2f0Bw8MfqmgWLS4V0NFR2dVUWpuYzg%2fedit%3fpli%3d1/RK=2/RS=KnhiAeTmRbEe6oOZDt18ae7sAg0-">Engineering Mechanics</a></td>
+                        <td>J.L. Meriam</td>
+                        <td>7th</td>
+                        <td>Wiley</td>
+                        <td>Mechanical Engineering</td>
+                    </tr>
+                    <tr>
+                        <td><a class="link" href="https://r.search.yahoo.com/_ylt=Awr1TYNMeNlmKgQAiea7HAx.;_ylu=Y29sbwNzZzMEcG9zAzEEdnRpZAMEc2VjA3Ny/RV=2/RE=1726737740/RO=10/RU=https%3a%2f%2fdrive.google.com%2ffile%2fd%2f0B7KA3NC3P6tNNkllakMxRmF0MzA%2fview%3fusp%3dsharing/RK=2/RS=aZyJrBYEewSLufJScXc53ahzp4M-">Thermodynamics: An Engineering Approach</a></td>
+                        <td>Yunus A. Cengel</td>
+                        <td>9th</td>
+                        <td>McGraw-Hill</td>
+                        <td>Mechanical Engineering</td>
+                        </tr>
+                        <tr>
+                        <td><a class="link" href="https://r.search.yahoo.com/_ylt=AwrPo62GeNlmUAQARPK7HAx.;_ylu=Y29sbwNzZzMEcG9zAzEEdnRpZAMEc2VjA3Ny/RV=2/RE=1726737799/RO=10/RU=https%3a%2f%2farchive.org%2fdetails%2fisbn_9780136176718/RK=2/RS=gI2GvkNmUWwGK8bMH5YZVSCvBCA-">Structural Analysis</a></td>
+                        <td>R.C. Hibbeler</td>
+                        <td>9th</td>
+                        <td>Pearson</td>
+                        <td>Civil Engineering</td>
+                    </tr>
+                    <tr>
+                        <td><a class="link" href="https://r.search.yahoo.com/_ylt=AwrKEibReNlmgwQAiua7HAx.;_ylu=Y29sbwNzZzMEcG9zAzIEdnRpZAMEc2VjA3Ny/RV=2/RE=1726737873/RO=10/RU=https%3a%2f%2f1lib.sk%2fbook%2f2780580%2fbc2ed3%2fconcrete-technology-theory-and-practice.html/RK=2/RS=25ptmnXrVj6A3zK4wVm4CZZ36lM-">Concrete Technology</a></td>
+                        <td>M.S. Shetty</td>
+                        <td>Revised</td>
+                        <td>S. Chand</td>
+                        <td>Civil Engineering</td>
+                    </tr>
+                    <!-- Chemical Engineering Books -->
+                    <tr>
+                        <td><a class="link" href="https://r.search.yahoo.com/_ylt=Awr1QJwkedlm_QMAV3G7HAx.;_ylu=Y29sbwNzZzMEcG9zAzEEdnRpZAMEc2VjA3Ny/RV=2/RE=1726737957/RO=10/RU=https%3a%2f%2farchive.org%2fdetails%2fcftri.10835introductiontoch0000walt/RK=2/RS=VYI8ISCZuf7EcxAykQ8xqK.uVj4-">Introduction to Chemical Engineering</a></td>
+                        <td>Walter L. Badger</td>
+                        <td>1st</td>
+                        <td>McGraw-Hill</td>
+                        <td>Chemical Engineering</td>
+                    </tr>
+                    <tr>
+                        <td><a class="link" href="https://r.search.yahoo.com/_ylt=Awrx.dlqedlmLAQATMe7HAx.;_ylu=Y29sbwNzZzMEcG9zAzEEdnRpZAMEc2VjA3Ny/RV=2/RE=1726738026/RO=10/RU=https%3a%2f%2farchive.org%2fdetails%2fchemicalreaction0000leve_g3o9/RK=2/RS=mOPAbkJxYKn_PQVgrlptINtebR4-">Chemical Reaction Engineering</a></td>
+                        <td>Octave Levenspiel</td>
+                        <td>3rd</td>
+                        <td>Wiley</td>
+                        <td>Chemical Engineering</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Department Sections -->
+        <section id="cs" class="book-section">
+            <h2>Computer Science Department Books</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Book Name</th>
+                        <th>Author</th>
+                        <th>Edition</th>
+                        <th>Publisher</th>
+                        <th>Department</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a class="link" href="https://dl.ebooksworld.ir/books/Introduction.to.Algorithms.4th.Leiserson.Stein.Rivest.Cormen.MIT.Press.9780262046305.EBooksWorld.ir.pdf">Introduction to Algorithms</a></td>
+                        <td>Thomas H. Cormen</td>
+                        <td>3rd</td>
+                        <td>MIT Press</td>
+                        <td>Computer Science</td>
+                    </tr>
+                    <tr>
+                        <td><a class="link" href="https://people.engr.tamu.edu/guni/csce421/files/AI_Russell_Norvig.pdf"> Artificial Intelligence: A Modern Approach</a></td>
+                        <td>Stuart Russell</td>
+                        <td>4th</td>
+                        <td>Pearson</td>
+                        <td>Computer Science</td>
+                    </tr>
+                    <tr>
+                        <td><a class="link" href="https://r.search.yahoo.com/_ylt=Awrx.5QVfNlmVAQAv967HAx.;_ylu=Y29sbwNzZzMEcG9zAzYEdnRpZAMEc2VjA3Ny/RV=2/RE=1726738709/RO=10/RU=https%3a%2f%2flink.springer.com%2fbook%2f10.1007%2f978-3-031-29642-0/RK=2/RS=EUgM676aTbVaIcMlzPUhLSF_4XI-">Deep Learning</a></td>
+                        <td>Springer Link</td>
+                        <td>3rd</td>
+                        <td>MIT Press</td>
+                        <td>Computer Science</td>
+
+                    </tr>
+                    <tr>
+                        <td><a class="link" href="https://r.search.yahoo.com/_ylt=AwrKHOj8fNlmLAQAiua7HAx.;_ylu=Y29sbwNzZzMEcG9zAzMEdnRpZAMEc2VjA3Ny/RV=2/RE=1726738941/RO=10/RU=https%3a%2f%2fwww.charuaggarwal.net%2fData-Mining.pdf/RK=2/RS=Kaz5kIflPmMpTaQkWrYDwPSdHws-">Data Mining</a></td>
+                        <td>Charu Agarwal</td>
+                        <td>3rd</td>
+                        <td>MIT Press</td>
+                        <td>Computer Science</td>
+
+                    </tr>
+                    <tr>
+                        <td><a class="link" href="https://r.search.yahoo.com/_ylt=Awr1QJxFgNlm_QMAyoi7HAx.;_ylu=Y29sbwNzZzMEcG9zAzMEdnRpZAMEc2VjA3Ny/RV=2/RE=1726739782/RO=10/RU=http%3a%2f%2fwww.seu1.org%2ffiles%2flevel6%2fIT230%2fBook%2f%28web.tech%25201st%2520book%29%2520Web%2520Technologies%2520-%2520A%2520Computer%2520Science%2520Perspective.pdf/RK=2/RS=jOEmMxiAwIBwb0HkFutxEwRstIo-">Web Technologies</a></td>
+                        <td>Jeffrey C. Jackson</td>
+                        <td>3rd</td>
+                        <td>Pearson Education</td>
+                        <td>Computer Science</td>
+
+                    </tr>
+                    <tr>
+                        <td><a class="link" href="https://r.search.yahoo.com/_ylt=Awrx.dlxftlmagQAdu67HAx.;_ylu=Y29sbwNzZzMEcG9zAzUEdnRpZAMEc2VjA3Ny/RV=2/RE=1726739314/RO=10/RU=https%3a%2f%2fbooks.google.com%2fbooks%2fabout%2fDigital_Image_Processing.html%3fid%3da62xQ2r_f8wC/RK=2/RS=EZ1jZov6R8jL.bY5gIXd5T9fMlU-"> Digital Image Processing</a></td>
+                        <td>Rafael C. Gonzalez</td>
+                        <td>3rd</td>
+                        <td>Pearson Education</td>
+                        <td>Computer Science</td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="ee" class="book-section">
+            <h2>Electrical Engineering Department Books</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Book Name</th>
+                        <th>Author</th>
+                        <th>Edition</th>
+                        <th>Publisher</th>
+                        <th>Department</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a class="link" href="https://r.search.yahoo.com/_ylt=AwrKF1PCedlmWQQAi.a7HAx.;_ylu=Y29sbwNzZzMEcG9zAzMEdnRpZAMEc2VjA3Ny/RV=2/RE=1726738114/RO=10/RU=https%3a%2f%2fdrive.google.com%2ffile%2fd%2f1UTnj6Nj6SuC0drzXpURcHi3jdcsk6E4s%2fview%3fusp%3dsharing/RK=2/RS=VEmu9Mq1kI.1nrWSjvQKJFsUnVM-  ">Micro electronic Circuits</a></td>
+                        <td>Adel S. Sedra</td>
+                        <td>7th</td>
+                        <td>Oxford</td>
+                        <td>Electrical Engineering</td>
+                    </tr>
+                    <tr>
+                        <td><a class="link" href="https://r.search.yahoo.com/_ylt=AwrPqFSHd9lmdAQAF8.7HAx.;_ylu=Y29sbwNzZzMEcG9zAzEEdnRpZAMEc2VjA3Ny/RV=2/RE=1726737544/RO=10/RU=https%3a%2f%2farchive.org%2fdetails%2fDigitalCommunicationsByJohnProakis4thEdition/RK=2/RS=aw43gz7.4zZiI94cAAuRrinMyRA-">Digital Communication</a></td>
+                        <td>John G. Proakis</td>
+                        <td>5th</td>
+                        <td>McGraw-Hill</td>
+                        <td>Electrical Engineering</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="me" class="book-section">
+            <h2>Mechanical Engineering Department Books</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Book Name</th>
+                        <th>Author</th>
+                        <th>Edition</th>
+                        <th>Publisher</th>
+                        <th>Department</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td> <a class="link" href="https://r.se arch.yahoo.com/_ylt=AwrKBUb1d9lmPQQAF1K7HAx.;_ylu=Y29sbwNzZzMEcG9zAzEEdnRpZAMEc2VjA3Ny/RV=2/RE=1726737654/RO=10/RU=https%3a%2f%2fdocs.google.com%2ffile%2fd%2f0Bw8MfqmgWLS4V0NFR2dVUWpuYzg%2fedit%3fpli%3d1/RK=2/RS=KnhiAeTmRbEe6oOZDt18ae7sAg0-">Engineering Mechanics</a></td>
+                        <td>J.L. Meriam</td>
+                        <td>7th</td>
+                        <td>Wiley</td>
+                        <td>Mechanical Engineering</td>
+                    </tr>
+                    <tr>
+                        <td><a class="link" href="https://r.search.yahoo.com/_ylt=Awr1TYNMeNlmKgQAiea7HAx.;_ylu=Y29sbwNzZzMEcG9zAzEEdnRpZAMEc2VjA3Ny/RV=2/RE=1726737740/RO=10/RU=https%3a%2f%2fdrive.google.com%2ffile%2fd%2f0B7KA3NC3P6tNNkllakMxRmF0MzA%2fview%3fusp%3dsharing/RK=2/RS=aZyJrBYEewSLufJScXc53ahzp4M-">Thermodynamics: An Engineering Approach</a></td>
+                        <td>Yunus A. Cengel</td>
+                        <td>9th</td>
+                        <td>McGraw-Hill</td>
+                        <td>Mechanical Engineering</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="ce" class="book-section">
+            <h2>Civil Engineering Department Books</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Book Name</th>
+                        <th>Author</th>
+                        <th>Edition</th>
+                        <th>Publisher</th>
+                        <th>Department</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a class="link" href="https://r.search.yahoo.com/_ylt=AwrKEibReNlmgwQAiua7HAx.;_ylu=Y29sbwNzZzMEcG9zAzIEdnRpZAMEc2VjA3Ny/RV=2/RE=1726737873/RO=10/RU=https%3a%2f%2f1lib.sk%2fbook%2f2780580%2fbc2ed3%2fconcrete-technology-theory-and-practice.html/RK=2/RS=25ptmnXrVj6A3zK4wVm4CZZ36lM-">Concrete Technology</a></td>
+                        <td>M.S. Shetty</td>
+                        <td>Revised</td>
+                        <td>S. Chand</td>
+                        <td>Civil Engineering</td>
+                    </tr>
+                    <tr>
+                        <td><a class="link" href="https://r.search.yahoo.com/_ylt=AwrKEibReNlmgwQAiua7HAx.;_ylu=Y29sbwNzZzMEcG9zAzIEdnRpZAMEc2VjA3Ny/RV=2/RE=1726737873/RO=10/RU=https%3a%2f%2f1lib.sk%2fbook%2f2780580%2fbc2ed3%2fconcrete-technology-theory-and-practice.html/RK=2/RS=25ptmnXrVj6A3zK4wVm4CZZ36lM-">Structural Analysis</a></td>
+                        <td>R.C Hibbeler</td>
+                        <td>9th</td>
+                        <td>pearson</td>
+                        <td>Civil Engineering</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="ch" class="book-section">
+            <h2>Chemical Engineering Department Books</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Book Name</th>
+                        <th>Author</th>
+                        <th>Edition</th>
+                        <th>Publisher</th>
+                        <th>Department</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a class="link" href="https://r.search.yahoo.com/_ylt=Awr1QJwkedlm_QMAV3G7HAx.;_ylu=Y29sbwNzZzMEcG9zAzEEdnRpZAMEc2VjA3Ny/RV=2/RE=1726737957/RO=10/RU=https%3a%2f%2farchive.org%2fdetails%2fcftri.10835introductiontoch0000walt/RK=2/RS=VYI8ISCZuf7EcxAykQ8xqK.uVj4-">Introduction to Chemical Engineering</a></td>
+                        <td>Walter L. Badger</td>
+                        <td>1st</td>
+                        <td>McGraw-Hill</td>
+                        <td>Chemical Engineering</td>
+                    </tr>
+                    <tr>
+                        <td><a class="link" href="https://r.search.yahoo.com/_ylt=Awrx.dlqedlmLAQATMe7HAx.;_ylu=Y29sbwNzZzMEcG9zAzEEdnRpZAMEc2VjA3Ny/RV=2/RE=1726738026/RO=10/RU=https%3a%2f%2farchive.org%2fdetails%2fchemicalreaction0000leve_g3o9/RK=2/RS=mOPAbkJxYKn_PQVgrlptINtebR4-">Chemical Reaction Engineering</a></td>
+                        <td>Octave Levenspiel</td>
+                        <td>3rd</td>
+                        <td>Wiley</td>
+                        <td>Chemical Engineering</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+    </div>
+
+    <script src="library.js"></script>
+</body>
+</html>
